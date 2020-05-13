@@ -2,7 +2,7 @@
 
 {% block content %}
   <h1>Sign in</h1>
-  <form class="" action="" method="post" novalidate>
+  <form action="" method="post" novalidate>
     {{ form.hidden_tag() }}
     <p>
       {{ form.username.label }}<br>
@@ -21,4 +21,5 @@
     <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
     <p>{{ form.submit() }}</p>
   </form>
+  <button onclick="window.location.href = '{{ url_for('register') }}'">Register</a>
 {% endblock %}
